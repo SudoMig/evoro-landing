@@ -24,7 +24,7 @@ export default function CalendlyButton() {
 
       {rootElement && (
         <PopupModal
-          url="https://calendly.com/your-calendly-link"
+          url="https://calendly.com/migautomates/15-minute-product-demo"
           onModalClose={() => setIsOpen(false)}
           open={isOpen}
           rootElement={rootElement}
