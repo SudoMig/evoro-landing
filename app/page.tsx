@@ -138,14 +138,14 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Beta Badge */}
             <div className="flex flex-col items-center gap-2 mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                <Zap className="w-4 h-4" />3 Spots Left • $1,600 Value • Closes
-                Feb 28
+              <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+                <Zap className="w-4 h-4" />3 Spots Available • $1,600+ Value •
+                Apply by Feb 28
               </div>
             </div>
 
             {/* H1 - Mobile Optimized */}
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-[1.1]">
               Never Lose a Lead to a{" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 Missed Call
@@ -155,7 +155,7 @@ export default function Home() {
             {/* Subheadline - Condensed */}
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-10 leading-relaxed px-4 sm:px-0">
               AI captures every missed call, transcribes details, scores
-              urgency, and follows up instantly. Stop losing $30K–$50K/year
+              urgency, and follows up instantly. Stop losing $20K–$50K/year
               while you&apos;re on the job.
             </p>
 
@@ -178,16 +178,16 @@ export default function Home() {
 
             {/* Trust Indicators - Simplified for Mobile */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500 px-4">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-emerald-500" />
+              <div className="flex items-center gap-2 w-48 sm:w-auto justify-start sm:justify-center">
+                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span>No credit card</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-emerald-500" />
+              <div className="flex items-center gap-2 w-48 sm:w-auto justify-start sm:justify-center">
+                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span>5-min setup</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-emerald-500" />
+              <div className="flex items-center gap-2 w-48 sm:w-auto justify-start sm:justify-center">
+                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span>Works with your line</span>
               </div>
             </div>
