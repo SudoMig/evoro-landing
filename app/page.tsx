@@ -14,21 +14,27 @@ import {
   Shield,
   Star,
 } from "lucide-react";
+import StickyROIBar from "@/components/StickyROIBar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Top Beta Banner */}
-      <div className="w-full bg-blue-900 text-blue-100 text-center text-sm sm:text-base py-3">
-        <span className="inline-flex items-center gap-2">
-          <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-blue-700 text-white rounded">
-            Beta
+      <div className="w-full bg-blue-900 text-blue-100 text-center text-sm sm:text-base py-3 px-4">
+        <span className="inline-flex flex-wrap items-center justify-center gap-2">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-blue-700 text-white rounded">
+              Beta
+            </span>
+            <span className="font-semibold">3 spots left</span>
           </span>
+          <span className="hidden sm:inline text-blue-300">•</span>
           <span className="font-semibold">
-            Early access for select service businesses.
+            $1,579 value — free for beta testers
           </span>
-          <a href="#join-beta" className="underline hover:text-white">
-            Join the beta
+          <span className="hidden sm:inline text-blue-300">•</span>
+          <a href="#join-beta" className="font-bold underline hover:text-white">
+            Apply by Feb 28 →
           </a>
         </span>
       </div>
@@ -45,16 +51,40 @@ export default function Home() {
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
                   Evoro
                 </span>
-                <span className="text-[11px] text-gray-500 -mt-1">
+                <span className="text-[11px] text-gray-500 -mt-1 hidden sm:block">
                   Turning missed calls into closed deals.
                 </span>
               </div>
             </div>
+            {/* Right-side actions - Desktop Only */}
+            <div className="hidden sm:flex items-center gap-4">
+              <a
+                href="https://missed-call-dashboard.vercel.app/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 hover:border-blue-300 transition-all"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Try Live Demo
+              </a>
+              <a
+                href="#roi"
+                className="inline-flex px-4 py-2 text-sm font-semibold text-white bg-blue-700 rounded-lg hover:bg-blue-800 transition-colors"
+              >
+                See Your ROI
+              </a>
+            </div>
+            {/* Mobile CTA */}
             <a
-              href="mailto:miguel@evoroai.io"
-              className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+              href="https://calendly.com/migautomates/15-minute-product-demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sm:hidden inline-flex px-4 py-2 text-sm font-semibold text-white bg-blue-700 rounded-lg"
             >
-              miguel@evoroai.io
+              Join Beta
             </a>
           </div>
         </div>
@@ -91,74 +121,88 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
-              <Zap className="w-4 h-4" />
-              AI Safety Net for Missed Calls — Beta
+            {/* Beta Badge */}
+            <div className="flex flex-col items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+                <Zap className="w-4 h-4" />3 Spots Left • $1,600 Value • Closes
+                Feb 28
+              </div>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Never Lose Another{" "}
+            {/* H1 - Mobile Optimized */}
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+              Never Lose a Lead to a{" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Lead
-              </span>{" "}
-              — or Dollar — to a Missed Call
+                Missed Call
+              </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed">
-              Evoro captures every missed call, transcribes details, ranks
-              urgency, and messages leads instantly — so you stop losing
-              thousands while staying focused on the work that matters.
-              Currently in{" "}
-              <span className="font-semibold text-gray-800">beta testing</span>{" "}
-              with select service businesses.
+            {/* Subheadline - Condensed */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-10 leading-relaxed px-4 sm:px-0">
+              AI captures every missed call, transcribes details, scores
+              urgency, and follows up instantly. Stop losing $30K–$50K/year
+              while you&apos;re on the job.
             </p>
 
+            {/* CTA Block - Tightened */}
             <div
               id="join-beta"
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+              className="flex flex-col items-center justify-center gap-4 mb-8"
             >
-              <CalendlyButton />
+              {/* Primary CTA */}
+              <CalendlyButton variant="primary" />
+
+              {/* Secondary Action */}
               <a
-                href="#how-it-works"
-                className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-gray-700 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                href="#roi"
+                className="text-base font-semibold text-blue-700 hover:text-blue-900 underline underline-offset-4"
               >
-                See How It Works
+                Calculate your ROI first →
               </a>
             </div>
 
-            <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+            {/* Trust Indicators - Simplified for Mobile */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500 px-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-emerald-500" />
-                <span>No credit card required</span>
+                <span>No credit card</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-emerald-500" />
-                <span>
-                  5-minute setup — works with your existing phone line
-                </span>
+                <span>5-min setup</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-emerald-500" />
+                <span>Works with your line</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof Placeholder */}
+      {/* Social Proof Placeholders */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/70 border-y border-gray-200">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-3">
-          <div className="text-sm text-gray-600">
+        <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
+          <div className="text-sm font-semibold text-gray-600">
             Trusted by beta users across home services
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-gray-500">
-            <span className="px-3 py-1 rounded-full bg-gray-100">Plumbing</span>
-            <span className="px-3 py-1 rounded-full bg-gray-100">HVAC</span>
-            <span className="px-3 py-1 rounded-full bg-gray-100">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+              Plumbing
+            </span>
+            <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+              HVAC
+            </span>
+            <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
               Electrical
             </span>
-            <span className="px-3 py-1 rounded-full bg-gray-100">Roofing</span>
-            <span className="px-3 py-1 rounded-full bg-gray-100">
+            <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+              Roofing
+            </span>
+            <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
               Landscaping
             </span>
           </div>
@@ -169,7 +213,7 @@ export default function Home() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
               The Hidden Leak Costing Service Businesses $30K–$50K/Year
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -195,15 +239,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ROI Calculator */}
+      <section id="roi" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+              Calculate Your Missed-Call ROI
+            </h3>
+            <p className="text-lg text-gray-600">
+              Estimate how much revenue you’re losing — and how much Evoro can
+              recover. Amounts shown in CAD.
+            </p>
+          </div>
+          <ROICalculator />
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Assumptions are editable. This calculator provides estimates, not
+            guarantees.
+          </p>
+        </div>
+      </section>
+
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section
+        id="how-it-works"
+        className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
               How Evoro Works
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-2">
               Three steps to stop revenue leaks and keep your pipeline full.
+            </p>
+            <p className="text-sm font-medium text-gray-500">
+              24/7 AI assistant for your business
             </p>
           </div>
 
@@ -227,10 +297,6 @@ export default function Home() {
               description="Lead appears in your dashboard and receives an automatic SMS so they feel taken care of."
             />
           </div>
-
-          <p className="text-center text-gray-500 mt-10">
-            It’s like having a personal assistant who never sleeps.
-          </p>
         </div>
       </section>
 
@@ -282,50 +348,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ROI Calculator */}
-      <section id="roi" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-              Calculate Your Missed-Call ROI
-            </h3>
-            <p className="text-lg text-gray-600">
-              Estimate how much revenue you’re losing — and how much Evoro can
-              recover. Amounts shown in CAD.
-            </p>
-          </div>
-          <ROICalculator />
-          <p className="text-xs text-gray-400 text-center mt-4">
-            Assumptions are editable. This calculator provides estimates, not
-            guarantees.
-          </p>
-        </div>
-      </section>
-
       {/* About — Founder Voice */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Why I Built Evoro
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            I’m Miguel — solo founder of Evoro. After working closely with
-            service businesses, I kept seeing the same painful pattern: owners
-            were losing $30K–$50K a year simply because they couldn’t answer
-            every call.
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            I built Evoro to fix that. A simple AI safety net that captures,
-            organizes, and follows up on every missed call — so no lead,
-            opportunity, or dollar slips through the cracks. We’re currently in{" "}
-            <span className="font-semibold text-gray-800">beta</span>,
-            partnering with owners to refine the product before full launch.
-          </p>
-          <div className="mt-8">
-            <CalendlyButton />
-            <p className="text-sm text-gray-500 mt-2">
-              Join the beta program — limited spots.
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+              I'm Miguel — solo founder of Evoro. After working closely with
+              service businesses, I kept seeing the same painful pattern:
+              hardworking owners were bleeding $30K–$50K annually simply because
+              they couldn't answer every call while on a job.
             </p>
+            <p>
+              The tools out there either cost a fortune, require a full-time
+              person to manage, or strip away the personal touch that wins
+              clients. I built Evoro to fix that — a simple AI safety net that
+              captures, organizes, and follows up on every missed call
+              automatically.
+            </p>
+            <p className="font-semibold text-gray-900">
+              We're currently in beta, partnering with forward-thinking owners
+              who want to be part of building something that actually works for
+              their business — not against it.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <CalendlyButton variant="secondary" />
           </div>
         </div>
       </section>
@@ -337,6 +388,10 @@ export default function Home() {
             FAQ
           </h2>
           <div className="divide-y divide-gray-200 bg-white rounded-2xl shadow">
+            <FAQItem
+              q="What do I get as a beta user?"
+              a="Full access to our top-tier system for one month completely free ($1,579 value) — no credit card required. In exchange, we ask for an honest testimonial. You'll also shape the product roadmap, lock in founder pricing for life, get priority support directly from me, and gain first-mover advantage while competitors sleep on innovation."
+            />
             <FAQItem
               q="Does Evoro work with my current phone system?"
               a="Yes. Evoro layers on top of your existing phone line — no hardware or migration required."
@@ -367,10 +422,10 @@ export default function Home() {
             See how Evoro turns every missed call into a booked opportunity —
             and tracks ROI in real time.
           </p>
-          <CalendlyButton />
-          <p className="text-sm text-gray-500 mt-3">
-            No setup headaches. Works with your existing phone line.
-          </p>
+          <CalendlyButton
+            variant="urgency"
+            subtext="No setup headaches. Works with your existing phone line."
+          />
         </div>
       </section>
 
@@ -378,8 +433,8 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
+            <div className="text-center md:text-left">
+              <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -419,7 +474,25 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <CalendlyButton />
+                  <a
+                    href="/checklist"
+                    className="hover:text-white transition-colors"
+                  >
+                    Free Missed Call Guide
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={() =>
+                      window.open(
+                        "https://calendly.com/migautomates/15-minute-product-demo",
+                        "_blank"
+                      )
+                    }
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    Book a Call
+                  </a>
                 </li>
               </ul>
             </div>
@@ -445,15 +518,18 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <StickyROIBar />
     </div>
   );
 }
 
 function ProblemCard({ stat, label }: { stat: string; label: string }) {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-xl p-8 text-center h-full flex flex-col justify-center min-h-[200px]">
-      <div className="text-5xl font-bold text-blue-700 mb-4">{stat}</div>
-      <p className="text-gray-700 font-medium text-base">{label}</p>
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-xl p-6 sm:p-8 text-center h-full flex flex-col justify-center min-h-[160px] sm:min-h-[200px]">
+      <div className="text-4xl sm:text-5xl font-bold text-blue-700 mb-3 sm:mb-4">
+        {stat}
+      </div>
+      <p className="text-gray-700 font-medium text-sm sm:text-base">{label}</p>
     </div>
   );
 }
@@ -471,15 +547,22 @@ function StepCard({
 }) {
   return (
     <div className="relative">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow min-h-[320px] flex flex-col">
-        <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 hover:shadow-xl transition-shadow min-h-[140px] sm:min-h-[220px] flex flex-col">
+        <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg">
           {number}
         </div>
-        <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-blue-600 mb-6 flex-shrink-0">
-          {icon}
+
+        {/* Icon + Title Side by Side (All Breakpoints) */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-blue-600 flex-shrink-0">
+            {icon}
+          </div>
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+            {title}
+          </h3>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-        <p className="text-gray-600 leading-relaxed text-base flex-grow">
+
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base flex-grow">
           {description}
         </p>
       </div>
@@ -497,12 +580,16 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all min-h-[220px] flex flex-col">
-      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-white mb-4 flex-shrink-0">
-        {icon}
+    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5 sm:p-6 hover:bg-white/20 transition-all min-h-[140px] sm:min-h-[180px] flex flex-col">
+      {/* Desktop: Icon Above Title */}
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+          {icon}
+        </div>
+        <h3 className="text-base sm:text-lg font-bold">{title}</h3>
       </div>
-      <h3 className="text-lg font-bold mb-3">{title}</h3>
-      <p className="text-blue-100 text-sm leading-relaxed flex-grow">
+
+      <p className="text-blue-100 text-xs sm:text-sm leading-relaxed flex-grow">
         {description}
       </p>
     </div>
@@ -525,10 +612,10 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 function ROICalculator() {
   const [callsPerWeek, setCallsPerWeek] = useState<number>(10);
-  const [answerRate, setAnswerRate] = useState<number>(70); // % answered live
+  const [answerRate, setAnswerRate] = useState<number>(70);
   const [avgJobValue, setAvgJobValue] = useState<number>(500);
-  const [closeRate, setCloseRate] = useState<number>(40); // % of contacted leads that convert
-  const [evoroRecoveryRate, setEvoroRecoveryRate] = useState<number>(60); // % of missed-lead revenue recovered by Evoro
+  const [closeRate, setCloseRate] = useState<number>(40);
+  const [evoroRecoveryRate, setEvoroRecoveryRate] = useState<number>(60);
 
   const metrics = useMemo(() => {
     const weeksPerYear = 52;
@@ -557,10 +644,12 @@ function ROICalculator() {
     });
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8">
-      <div className="grid md:grid-cols-2 gap-8 text-gray-600 font-bold ">
-        {/* Inputs */}
-        <div className="space-y-5">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 sm:p-8">
+      {/* Single Column Layout - Mobile First */}
+      <div className="space-y-8">
+        {/* Inputs Section */}
+        <div className="space-y-4">
+          <h4 className="text-lg font-bold text-gray-900 mb-4">Your Numbers</h4>
           <InputRow
             label="Calls per week"
             value={callsPerWeek}
@@ -603,8 +692,9 @@ function ROICalculator() {
           />
         </div>
 
-        {/* Outputs */}
-        <div className="space-y-4">
+        {/* Results Section */}
+        <div className="border-t-2 border-gray-200 pt-6 space-y-3">
+          <h4 className="text-lg font-bold text-gray-900 mb-4">Your Results</h4>
           <StatLine
             label="Total calls / year"
             value={metrics.totalCallsYear.toLocaleString()}
@@ -614,20 +704,23 @@ function ROICalculator() {
             value={Math.round(metrics.missedCallsYear).toLocaleString()}
           />
           <StatLine
-            label="Estimated missed revenue / year"
+            label="Missed revenue / year"
             value={currency(metrics.missedRevenueYear)}
             highlight
+            highlightColor="bg-red-50"
+            textColor="text-red-800"
           />
-          <div className="border-t border-gray-200 pt-4">
+          <div className="border-t border-gray-200 pt-4 mt-4">
             <StatLine
-              label="Potential revenue recovered with Evoro / year"
+              label="Revenue recovered with Evoro"
               value={currency(metrics.recoveredRevenue)}
               highlight
+              highlightColor="bg-emerald-50"
+              textColor="text-emerald-700"
               strong
             />
             <p className="text-xs text-gray-500 mt-2">
-              Recovery rate reflects faster response + automated follow-up
-              keeping leads warm.
+              Based on faster response + automated follow-up.
             </p>
           </div>
         </div>
@@ -653,7 +746,7 @@ function InputRow({
 }) {
   return (
     <label className="block">
-      <div className="text-sm font-medium text-gray-700 mb-1">{label}</div>
+      <div className="text-sm font-bold text-gray-800 mb-1">{label}</div>
       <input
         type="number"
         value={value}
@@ -661,7 +754,7 @@ function InputRow({
         min={min}
         max={max}
         step={step}
-        className="w-full rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600"
+        className="w-full rounded-lg border-gray-300 text-blue-600 font-bold border-2 border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none bg-white px-4 py-2.5"
       />
     </label>
   );
@@ -671,24 +764,28 @@ function StatLine({
   label,
   value,
   highlight = false,
+  highlightColor = "bg-blue-50",
+  textColor = "text-gray-900",
   strong = false,
 }: {
   label: string;
   value: string;
   highlight?: boolean;
+  highlightColor?: string;
+  textColor?: string;
   strong?: boolean;
 }) {
   return (
     <div
       className={`flex items-center justify-between py-2 ${
-        highlight ? "bg-blue-50 px-3 rounded" : ""
+        highlight ? `${highlightColor} px-3 rounded` : ""
       }`}
     >
-      <span className="text-sm text-gray-600">{label}</span>
+      <span className="text-sm font-medium text-gray-700">{label}</span>
       <span
-        className={`text-base ${strong ? "font-extrabold" : "font-semibold"} ${
-          highlight ? "text-blue-900" : "text-gray-900"
-        }`}
+        className={`text-base ${
+          strong ? "font-extrabold" : "font-semibold"
+        } ${textColor}`}
       >
         {value}
       </span>
