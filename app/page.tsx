@@ -93,7 +93,6 @@ export default function Home() {
       <Head>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -121,8 +120,21 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(to right, rgb(37, 99, 235) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgb(37, 99, 235) 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+              animation: "gridSlide 20s linear infinite",
+            }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Beta Badge */}
             <div className="flex flex-col items-center gap-2 mb-6">
