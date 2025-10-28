@@ -259,7 +259,7 @@ export default function Home() {
               Calculate Your Missed-Call ROI
             </h3>
             <p className="text-lg text-gray-600">
-              Estimate how much revenue you’re losing — and how much Evoro can
+              Estimate how much revenue you’re losing and how much Evoro can
               recover. Amounts shown in CAD.
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function Home() {
               number="1"
               icon={<Phone className="w-8 h-8" />}
               title="Missed Call Detected"
-              description="A customer calls while you’re on a job. Evoro captures it instantly — no lost opportunity."
+              description="A customer calls while you’re on a job. Evoro captures it instantly. No lost opportunity."
             />
             <StepCard
               number="2"
@@ -317,7 +317,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Everything You Need to Capture, Prioritize, and Convert —
+              Everything You Need to Capture, Prioritize, and Convert
               Automatically
             </h2>
             <p className="text-xl text-blue-200">
@@ -329,7 +329,7 @@ export default function Home() {
             <FeatureCard
               icon={<Clock className="w-6 h-6" />}
               title="24/7 Monitoring"
-              description="Never lose a lead again — even after hours and weekends."
+              description="Never lose a lead again. Even after hours and weekends."
             />
             <FeatureCard
               icon={<Zap className="w-6 h-6" />}
@@ -349,12 +349,12 @@ export default function Home() {
             <FeatureCard
               icon={<Phone className="w-6 h-6" />}
               title="Smart Transcriptions"
-              description="Caller details and intent extracted — no endless voicemail replay."
+              description="Caller details and intent extracted. No endless voicemail replay."
             />
             <FeatureCard
               icon={<CheckCircle className="w-6 h-6" />}
               title="Mobile Dashboard"
-              description="Manage leads anywhere — no laptop required."
+              description="Manage leads anywhere. No laptop required."
             />
           </div>
         </div>
@@ -368,22 +368,28 @@ export default function Home() {
           </h2>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
-              I'm Miguel — solo founder of Evoro. After working closely with
-              service businesses, I kept seeing the same painful pattern:
-              hardworking owners were bleeding $30K–$50K annually simply because
-              they couldn't answer every call while on a job.
+              I'm Miguel, founder of Evoro. After talking with countless service
+              business owners, I saw the same frustrating pattern over and over
+              again. Hardworking people losing real money simply because they
+              were busy doing the work they’re great at.
             </p>
             <p>
-              The tools out there either cost a fortune, require a full-time
-              person to manage, or strip away the personal touch that wins
-              clients. I built Evoro to fix that — a simple AI safety net that
-              captures, organizes, and follows up on every missed call
-              automatically.
+              You work hard for every lead you shouldn’t lose one just because
+              you couldn’t pick up. That’s why I built Evoro, an AI safety net
+              that makes sure every missed call is captured, followed up, and
+              turned into opportunity. Best part, you don’t have to lift a
+              finger. The automation setup does the work so you can sit back,
+              focus on your craft and watch your ROI climb.
+            </p>
+            <p>
+              No dashboards to learn. No complex setup. I handle everything
+              behind the scenes so you can focus on your craft and watch your
+              ROI rise effortlessly.
             </p>
             <p className="font-semibold text-gray-900">
               We're currently in beta, partnering with forward-thinking owners
               who want to be part of building something that actually works for
-              their business — not against it.
+              their business, not against it.
             </p>
           </div>
 
@@ -431,8 +437,8 @@ export default function Home() {
             Stop Losing Leads. Start Closing More Jobs.
           </h2>
           <p className="text-xl text-gray-600 mb-10">
-            See how Evoro turns every missed call into a booked opportunity —
-            and tracks ROI in real time.
+            See how Evoro turns every missed call into a booked opportunity and
+            tracks ROI in real time.
           </p>
           <CalendlyButton
             variant="urgency"
