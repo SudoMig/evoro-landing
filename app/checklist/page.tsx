@@ -32,7 +32,7 @@ export default function ChecklistPage() {
         <div className="prose prose-lg max-w-none mb-12">
           <p className="text-gray-700 leading-relaxed">
             Most service businesses aren't losing money because they need more
-            leads — they're losing it because they can't keep the ones they
+            leads, they're losing it because they can't keep the ones they
             already have.
           </p>
           <p className="text-gray-700 leading-relaxed">

@@ -24,10 +24,12 @@ export default function Home() {
         <span className="inline-flex flex-wrap items-center justify-center gap-2">
           <span className="inline-flex items-center gap-1.5">
             <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-blue-700 text-white rounded">
-              Beta
+              Winter HVAC Beta
             </span>
             <span className="font-semibold">3 spots left</span>
           </span>
+          <span className="hidden sm:inline text-blue-300">•</span>
+          <span className="font-semibold">Ottawa + area</span>
           <span className="hidden sm:inline text-blue-300">•</span>
           <span className="font-semibold">
             $1,579 value — free for beta testers
@@ -52,7 +54,7 @@ export default function Home() {
                   Evoro
                 </span>
                 <span className="text-[11px] text-gray-500 -mt-1 hidden sm:block">
-                  Turning missed calls into closed deals.
+                  Turning missed HVAC calls into booked jobs.
                 </span>
               </div>
             </div>
@@ -139,8 +141,9 @@ export default function Home() {
             {/* Beta Badge */}
             <div className="flex flex-col items-center gap-2 sm:mb-6">
               <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                <Zap className="w-4 h-4" />3 Spots Available • $1,600+ Value •
-                Apply by Feb 28
+                <Zap className="w-4 h-4" />
+                Winter HVAC Beta • 3 spots left • Ottawa + area • $1,579 value •
+                free for beta testers
               </div>
             </div>
 
@@ -154,9 +157,9 @@ export default function Home() {
 
             {/* Subheadline - Condensed */}
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-10 leading-relaxed px-4 sm:px-0">
-              AI captures every missed call, transcribes details, scores
-              urgency, and follows up instantly. Stop losing $20K–$50K/year
-              while you&apos;re on the job.
+              When a &quot;no heat&quot; call hits while you&apos;re on a job,
+              Evoro catches it, tags it as urgent and texts the homeowner back
+              in seconds so they don&apos;t keep calling your competitors.
             </p>
 
             {/* CTA Block - Tightened */}
@@ -188,7 +191,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2 w-48 sm:w-auto justify-start sm:justify-center">
                 <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                <span>Works with your line</span>
+                <span>No new number needed</span>
               </div>
             </div>
           </div>
@@ -199,23 +202,23 @@ export default function Home() {
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/70 border-y border-gray-200">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
           <div className="text-sm font-semibold text-gray-600">
-            Trusted by beta users across home services
+            Trusted by HVAC and home comfort pros
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
-              Plumbing
+              Residential HVAC
             </span>
             <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
-              HVAC
+              Commercial HVAC
             </span>
             <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
-              Electrical
+              Furnace Service
             </span>
             <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
-              Roofing
+              AC Installations
             </span>
             <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
-              Landscaping
+              24/7 Emergency Calls
             </span>
           </div>
         </div>
@@ -226,11 +229,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
-              The Hidden Leak Costing Service Businesses $30K–$50K/Year
+              The Hidden Leak Costing HVAC Companies $30K to $60K a Year
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              While you’re serving customers, new leads go to voicemail, grow
-              cold, and hire your competitor.
+              You&apos;re in a basement fixing a no-heat call. Meanwhile two
+              more calls hit your line, go to voicemail and those homeowners
+              just call the next company on Google. That&apos;s real money
+              walking away.
             </p>
           </div>
 
@@ -259,7 +264,7 @@ export default function Home() {
               Calculate Your Missed-Call ROI
             </h3>
             <p className="text-lg text-gray-600">
-              Estimate how much revenue you’re losing and how much Evoro can
+              Estimate how much revenue you're losing and how much Evoro can
               recover. Amounts shown in CAD.
             </p>
           </div>
@@ -294,19 +299,19 @@ export default function Home() {
               number="1"
               icon={<Phone className="w-8 h-8" />}
               title="Missed Call Detected"
-              description="A customer calls while you’re on a job. Evoro captures it instantly. No lost opportunity."
+              description="A homeowner calls about no heat at 10:47 PM while you're either on another job or finally off the clock. Evoro captures it instantly. No lost opportunity."
             />
             <StepCard
               number="2"
               icon={<Zap className="w-8 h-8" />}
               title="AI Transcribes & Scores"
-              description="Voicemail is analyzed: name, intent, urgency, and estimated job value."
+              description="Voicemail is analyzed: name, intent, urgency and estimated job value."
             />
             <StepCard
               number="3"
               icon={<MessageSquare className="w-8 h-8" />}
               title="Instant Follow‑Up"
-              description="Lead appears in your dashboard and receives an automatic SMS so they feel taken care of."
+              description="You see the lead in your mobile dashboard tagged URGENT - No Heat so you know who to call back first. The customer gets an instant SMS confirmation so they stop shopping around."
             />
           </div>
         </div>
@@ -317,7 +322,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Everything You Need to Capture, Prioritize, and Convert
+              Everything You Need to Capture, Prioritize and Convert
               Automatically
             </h2>
             <p className="text-xl text-blue-200">
@@ -339,7 +344,7 @@ export default function Home() {
             <FeatureCard
               icon={<MessageSquare className="w-6 h-6" />}
               title="Auto SMS Follow‑Up"
-              description="Instant acknowledgment keeps leads warm while you finish current jobs."
+              description="Instant SMS confirms you got their call — so they stop searching for other contractors."
             />
             <FeatureCard
               icon={<TrendingUp className="w-6 h-6" />}
@@ -349,12 +354,12 @@ export default function Home() {
             <FeatureCard
               icon={<Phone className="w-6 h-6" />}
               title="Smart Transcriptions"
-              description="Caller details and intent extracted. No endless voicemail replay."
+              description='Automatically tags issues like "No heat," "AC not cooling," or "Water tank leaking" so you can scan and prioritize in seconds.'
             />
             <FeatureCard
               icon={<CheckCircle className="w-6 h-6" />}
-              title="Mobile Dashboard"
-              description="Manage leads anywhere. No laptop required."
+              title="On the Road Dashboard"
+              description="See your hottest leads and their issues from your phone between jobs. No laptop or office staff required."
             />
           </div>
         </div>
@@ -368,28 +373,27 @@ export default function Home() {
           </h2>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
-              I'm Miguel, founder of Evoro. After talking with countless service
-              business owners, I saw the same frustrating pattern over and over
-              again. Hardworking people losing real money simply because they
-              were busy doing the work they’re great at.
+              I&apos;m Miguel, founder of Evoro. After talking with HVAC owners
+              and home service companies, I kept seeing the same pattern: they
+              were slammed on jobs and still losing money because no one could
+              catch every call.
             </p>
             <p>
-              You work hard for every lead you shouldn’t lose one just because
-              you couldn’t pick up. That’s why I built Evoro, an AI safety net
-              that makes sure every missed call is captured, followed up, and
-              turned into opportunity. Best part, you don’t have to lift a
-              finger. The automation setup does the work so you can sit back,
-              focus on your craft and watch your ROI climb.
+              You pay for ads, yard signs, and truck wraps. You shouldn&apos;t
+              lose a no-heat lead just because you were under a furnace or
+              driving between jobs. That&apos;s why I built Evoro, an AI safety
+              net that makes sure every missed call is captured, followed up and
+              turned into a real opportunity.
             </p>
             <p>
-              No dashboards to learn. No complex setup. I handle everything
-              behind the scenes so you can focus on your craft and watch your
-              ROI rise effortlessly.
+              You don&apos;t need to learn another software. I handle the setup,
+              connect it to your existing HVAC line and show you in plain
+              English how much revenue we&apos;re saving you each month.
             </p>
             <p className="font-semibold text-gray-900">
-              We're currently in beta, partnering with forward-thinking owners
-              who want to be part of building something that actually works for
-              their business, not against it.
+              We&apos;re in beta with owner-operators who want an unfair
+              advantage this winter and who aren&apos;t afraid to give honest
+              feedback so we can build the thing they actually wish existed.
             </p>
           </div>
 
@@ -408,23 +412,31 @@ export default function Home() {
           <div className="divide-y divide-gray-200 bg-white rounded-2xl shadow">
             <FAQItem
               q="What do I get as a beta user?"
-              a="Full access to our top-tier system for one month completely free ($1,579 value) — no credit card required. In exchange, we ask for an honest testimonial. You'll also shape the product roadmap, lock in founder pricing for life, get priority support directly from me, and gain first-mover advantage while competitors sleep on innovation."
+              a="Full access to our top-tier system for one month completely free ($1,579 value) — no credit card required. In exchange, we ask for an honest testimonial. You'll also shape the product roadmap, lock in founder pricing for life, get priority support directly from me and gain first-mover advantage while competitors sleep on innovation."
             />
             <FAQItem
-              q="Does Evoro work with my current phone system?"
-              a="Yes. Evoro layers on top of your existing phone line — no hardware or migration required."
+              q="Does this actually help during peak season?"
+              a='Yes, that&apos;s when it matters most. When winter "no heat" or summer "no cooling" calls are flooding your line, Evoro catches the ones you can&apos;t answer, tags urgency and texts those customers back so they don&apos;t keep calling other HVAC companies.'
+            />
+            <FAQItem
+              q="Can it tell the difference between an emergency and a quote request?"
+              a='Yes. Evoro looks for phrases like "no heat," "AC not cooling," "water leaking," or "smell of gas" and flags those as high-urgency. Lower-urgency requests like maintenance, quotes, or filter changes are tagged differently so you can call back in the right order.'
+            />
+            <FAQItem
+              q="Does this work for commercial HVAC too?"
+              a="It does. Commercial inquiries get tagged separately so you can treat them differently if you want — for example routing them to a specific team member or prioritizing bigger contracts."
+            />
+            <FAQItem
+              q="Do I have to change my phone number?"
+              a="No. Evoro layers on top of your existing HVAC line. You keep your current number, your current call flows and we handle the missed-call safety net in the background."
             />
             <FAQItem
               q="What happens after a missed call?"
-              a="Evoro logs the call, transcribes the voicemail, ranks urgency, sends an instant SMS, and surfaces the lead in your dashboard."
+              a="Evoro logs the missed call, analyzes the voicemail or missed-call context, tags urgency, sends a confirmation text to the customer and puts the lead in your dashboard so you or your team can call back with the full context."
             />
             <FAQItem
-              q="Is this replacing my team?"
-              a="No — Evoro removes the inefficiencies so your team can focus on high‑value work. It enhances the human touch; it doesn’t replace it."
-            />
-            <FAQItem
-              q="How secure is my data?"
-              a="We follow best‑practice security standards and data minimization. You own your customer data."
+              q="Is this replacing my dispatcher or office staff?"
+              a="No. Evoro is there for the calls your team can't catch — after hours, weekends or when everyone is busy. It handles the boring part (logging, tagging, and texting) so your people can focus on talking to customers and booking jobs."
             />
           </div>
         </div>
@@ -628,31 +640,26 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     </details>
   );
 }
+
 function ROICalculator() {
-  const [callsPerWeek, setCallsPerWeek] = useState<number>(10);
-  const [answerRate, setAnswerRate] = useState<number>(70);
-  const [avgJobValue, setAvgJobValue] = useState<number>(500);
-  const [closeRate, setCloseRate] = useState<number>(40);
-  const [evoroRecoveryRate, setEvoroRecoveryRate] = useState<number>(60);
+  const [missedCallsPerWeek, setMissedCallsPerWeek] = useState<number>(8);
+  const [opportunityRate, setOpportunityRate] = useState<number>(40);
+  const [avgJobValue, setAvgJobValue] = useState<number>(800);
 
   const metrics = useMemo(() => {
     const weeksPerYear = 52;
-    const totalCallsYear = callsPerWeek * weeksPerYear;
-    const missedRate = Math.max(0, 100 - answerRate) / 100;
-    const missedCallsYear = totalCallsYear * missedRate;
-
-    const revenuePerLead = avgJobValue * (closeRate / 100);
-    const missedRevenueYear = missedCallsYear * revenuePerLead;
-
-    const recoveredRevenue = missedRevenueYear * (evoroRecoveryRate / 100);
+    const missedCallsYear = missedCallsPerWeek * weeksPerYear;
+    const actualOpportunities = missedCallsYear * (opportunityRate / 100);
+    const revenueAtRisk = actualOpportunities * avgJobValue;
+    const evoroRecovery = revenueAtRisk * 0.6;
 
     return {
-      totalCallsYear,
       missedCallsYear,
-      missedRevenueYear,
-      recoveredRevenue,
+      actualOpportunities,
+      revenueAtRisk,
+      evoroRecovery,
     };
-  }, [callsPerWeek, answerRate, avgJobValue, closeRate, evoroRecoveryRate]);
+  }, [missedCallsPerWeek, opportunityRate, avgJobValue]);
 
   const currency = (n: number) =>
     n.toLocaleString("en-CA", {
@@ -662,151 +669,110 @@ function ROICalculator() {
     });
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 sm:p-8">
-      {/* Single Column Layout - Mobile First */}
-      <div className="space-y-8">
-        {/* Inputs Section */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-bold text-gray-900 mb-4">Your Numbers</h4>
-          <InputRow
-            label="Calls per week"
-            value={callsPerWeek}
-            setValue={setCallsPerWeek}
-            min={0}
-            max={500}
-            step={1}
-          />
-          <InputRow
-            label="Live answer rate (%)"
-            value={answerRate}
-            setValue={setAnswerRate}
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 max-w-2xl mx-auto">
+      <div className="space-y-6">
+        {/* Input 1 */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Estimated missed calls per week
+          </label>
+          <input
+            type="number"
+            value={missedCallsPerWeek}
+            onChange={(e) => setMissedCallsPerWeek(Number(e.target.value))}
             min={0}
             max={100}
             step={1}
-          />
-          <InputRow
-            label="Average job value (CAD)"
-            value={avgJobValue}
-            setValue={setAvgJobValue}
-            min={0}
-            max={100000}
-            step={50}
-          />
-          <InputRow
-            label="Close rate when contacted (%)"
-            value={closeRate}
-            setValue={setCloseRate}
-            min={0}
-            max={100}
-            step={1}
-          />
-          <InputRow
-            label="Evoro recovery rate (%)"
-            value={evoroRecoveryRate}
-            setValue={setEvoroRecoveryRate}
-            min={0}
-            max={100}
-            step={1}
+            className="w-full rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none bg-white px-4 py-3 text-lg font-semibold text-gray-900"
           />
         </div>
 
-        {/* Results Section */}
-        <div className="border-t-2 border-gray-200 pt-6 space-y-3">
-          <h4 className="text-lg font-bold text-gray-900 mb-4">Your Results</h4>
-          <StatLine
-            label="Total calls / year"
-            value={metrics.totalCallsYear.toLocaleString()}
+        {/* Result 1 */}
+        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium text-gray-700">
+              Missed calls per year
+            </span>
+            <span className="text-xl font-bold text-gray-900">
+              ~{Math.round(metrics.missedCallsYear).toLocaleString()}
+            </span>
+          </div>
+        </div>
+
+        {/* Input 2 */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            % that are actual opportunities
+            <span className="text-xs font-normal text-gray-500 ml-2">
+              (Industry avg: 30-50%)
+            </span>
+          </label>
+          <input
+            type="number"
+            value={opportunityRate}
+            onChange={(e) => setOpportunityRate(Number(e.target.value))}
+            min={0}
+            max={100}
+            step={1}
+            className="w-full rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none bg-white px-4 py-3 text-lg font-semibold text-gray-900"
           />
-          <StatLine
-            label="Missed calls / year"
-            value={Math.round(metrics.missedCallsYear).toLocaleString()}
+        </div>
+
+        {/* Result 2 */}
+        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium text-gray-700">
+              Actual opportunities per year
+            </span>
+            <span className="text-xl font-bold text-gray-900">
+              ~{Math.round(metrics.actualOpportunities).toLocaleString()}
+            </span>
+          </div>
+        </div>
+
+        {/* Input 3 */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Average job value (CAD)
+          </label>
+          <input
+            type="number"
+            value={avgJobValue}
+            onChange={(e) => setAvgJobValue(Number(e.target.value))}
+            min={0}
+            max={50000}
+            step={50}
+            className="w-full rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none bg-white px-4 py-3 text-lg font-semibold text-gray-900"
           />
-          <StatLine
-            label="Missed revenue / year"
-            value={currency(metrics.missedRevenueYear)}
-            highlight
-            highlightColor="bg-red-50"
-            textColor="text-red-800"
-          />
-          <div className="border-t border-gray-200 pt-4 mt-4">
-            <StatLine
-              label="Revenue recovered with Evoro"
-              value={currency(metrics.recoveredRevenue)}
-              highlight
-              highlightColor="bg-emerald-50"
-              textColor="text-emerald-700"
-              strong
-            />
-            <p className="text-xs text-gray-500 mt-2">
-              Based on faster response + automated follow-up.
+        </div>
+
+        {/* Big Result - Revenue at Risk */}
+        <div className="bg-orange-50 rounded-lg p-6 border-2 border-orange-200">
+          <div className="text-center">
+            <div className="text-sm font-semibold text-orange-900 uppercase tracking-wide mb-2">
+              Revenue You're Losing Per Year
+            </div>
+            <div className="text-4xl sm:text-5xl font-extrabold text-orange-700">
+              {currency(metrics.revenueAtRisk)}
+            </div>
+          </div>
+        </div>
+
+        {/* Evoro Impact */}
+        <div className="bg-emerald-50 rounded-lg p-6 border-2 border-emerald-200">
+          <div className="text-center">
+            <div className="text-sm font-semibold text-emerald-900 uppercase tracking-wide mb-2">
+              Revenue Recovered with Evoro (60% recovery)
+            </div>
+            <div className="text-4xl sm:text-5xl font-extrabold text-emerald-700">
+              {currency(metrics.evoroRecovery)}
+            </div>
+            <p className="text-xs text-emerald-700 mt-3">
+              Based on faster response + automated follow-up
             </p>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function InputRow({
-  label,
-  value,
-  setValue,
-  min = 0,
-  max = 100,
-  step = 1,
-}: {
-  label: string;
-  value: number;
-  setValue: (v: number) => void;
-  min?: number;
-  max?: number;
-  step?: number;
-}) {
-  return (
-    <label className="block">
-      <div className="text-sm font-bold text-gray-800 mb-1">{label}</div>
-      <input
-        type="number"
-        value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
-        min={min}
-        max={max}
-        step={step}
-        className="w-full rounded-lg border-gray-300 text-blue-600 font-bold border-2 border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none bg-white px-4 py-2.5"
-      />
-    </label>
-  );
-}
-
-function StatLine({
-  label,
-  value,
-  highlight = false,
-  highlightColor = "bg-blue-50",
-  textColor = "text-gray-900",
-  strong = false,
-}: {
-  label: string;
-  value: string;
-  highlight?: boolean;
-  highlightColor?: string;
-  textColor?: string;
-  strong?: boolean;
-}) {
-  return (
-    <div
-      className={`flex items-center justify-between py-2 ${
-        highlight ? `${highlightColor} px-3 rounded` : ""
-      }`}
-    >
-      <span className="text-sm font-medium text-gray-700">{label}</span>
-      <span
-        className={`text-base ${
-          strong ? "font-extrabold" : "font-semibold"
-        } ${textColor}`}
-      >
-        {value}
-      </span>
     </div>
   );
 }
